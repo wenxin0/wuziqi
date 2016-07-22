@@ -1,0 +1,283 @@
+html{
+	overflow: hidden;
+}
+body{
+	font-family: sans-serif;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+%center{
+	position: absolute;
+	top:0;
+	left: 0;
+	right:0;
+	bottom:0;
+	margin: auto;
+}
+.contain{
+	@extend %center;
+	width: 100%;
+	height: 100%;
+	background: url(img/6.jpg)no-repeat center center;
+}
+$width:600px;
+.contain .qipan{
+	@extend %center;
+	width: $width;
+	height: $width;
+	background: url(img/beijing.jpg);
+	background-size: cover;
+	opacity: 0.8;
+	.qizi{		
+		width: $width/15-$width/60;
+		height: $width/15-$width/60;
+		float: left;
+		margin: $width/120;
+		background: rgba(100,29,38,0);	
+		position: relative;
+		z-index: 2;
+		border-radius: 50%;
+	}
+	.qizi.bai{
+		background: #FFFFFF;
+		box-shadow: 0 $width/120 $width/120 #666666;
+	}
+	.qizi.hei{
+		background: #000000;
+		box-shadow: 0 $width/120 $width/120 #666666;
+	}
+	.hang{
+		display: block;
+		position: absolute;
+		height: 1px;
+		left: $width/30;	
+		width:$width/1-$width/15;
+		animation:bdong 1s ease forwards;
+		opacity: 0;
+		background: #000;
+	}
+	.shu{
+		display: block;
+		position: absolute;
+		top:$width/30;
+		width: 1px;		
+		height: $width/1-$width/15;
+		animation:idong 1s ease forwards;
+		opacity: 0;
+		background: #000;
+	}
+}
+@for $i from 0 through 14{
+	.qipan b:nth-of-type(#{$i+1}){
+		top:$width/30+$i*$width/15;
+	};
+	.qipan i:nth-of-type(#{$i+1}){
+		left:$width/30+$i*$width/15;
+	}
+}
+.contain .qipan span{
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+	width: $width/60;
+	height: $width/60;
+	background: #000000;	
+	opacity: 0;
+	animation:diao 0.06s ease forwards;
+	@for $i from 1 through 5{
+		&:nth-of-type(#{$i}){
+			animation-delay:$i*0.2s;			
+		}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+	}
+	&:nth-of-type(1){
+		top:3.5*$width/15;
+		left:3.5*$width/15;
+	}
+	&:nth-of-type(2){
+		top:3.5*$width/15;
+		left:11.5*$width/15;
+	}
+	&:nth-of-type(3){
+		top:7.5*$width/15;
+		left:7.5*$width/15;
+	}
+	&:nth-of-type(4){
+		top:11.5*$width/15;
+		left:3.5*$width/15;
+	}
+	&:nth-of-type(5){
+		top:11.5*$width/15;
+		left:11.5*$width/15;
+	}
+}
+.dian1{
+	display: none;
+}
+@keyframes diao{
+	0%{
+		transform:translateY(-1000px);
+	}
+	100%{
+		transform:translateY(0px);
+		transform:translate3d(-45%,-45%,0);
+		opacity: 1;
+	}
+}
+@keyframes bdong{
+	0%{
+		transform:translate3d(-1000px,0,0);
+	}
+	100%{
+		transform:translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+@keyframes idong{
+	0%{
+		transform:translate3d(0,-1000px,0);
+	}
+	100%{
+		transform:translateY(0,0,0);
+		opacity: 1;
+	}
+}
+
+
+.box{
+	width: 100%;
+	height: 100%;
+	@extend %center;
+	background:#222222;
+	transform:translateX(0);
+	transition:transform 1s ease;
+}
+.box.ani{
+	transform:translateY(-1000px);
+}
+.box .kaishi{
+	position: absolute;
+	top: 100px;
+	left:50%;
+	margin-left: -250px;
+	width:500px;
+	height: 293px;
+	background:url(img/kaishi.png)no-repeat;
+	background-size: cover;
+	transform:translateY(0);
+	transition:transform 1s ease;
+}
+.box .youxi{
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	top: 500px;
+	left: 50%;
+	margin-left: -100px;
+	background:url(img/youxi.png)no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	transform:translateY(0);
+	transition:transform 1s ease;
+}
+.left{
+	width: 200px;
+	height: 600px;
+	position: fixed;
+	top:50%;
+	margin-top: -300px;
+	left:183px;
+	background:rgba(0,0,0,0.6);
+}
+.left .left1{
+	width: 180px;
+	height: 300px;
+	background: url(img/dujiaoshou.jpg)no-repeat;
+}
+.left .left1 .time1{
+	width: 80px;
+	height: 20px;
+	position: absolute;
+	top: 249px;
+	left:66px;
+	font-size: 16px;
+	line-height: 20px;
+	color:#DAAE7D;
+	text-align: center;
+}
+.left .left2 .time2{
+	width: 80px;
+	height: 20px;
+	position: absolute;
+	top: 549px;
+	left:66px;
+	font-size: 16px;
+	line-height: 20px;
+	color:#DAAE7D;
+	text-align: center;
+}
+.left .left2{
+	width: 180px;
+	height: 300px;
+	background: url(img/aiqin.jpg)no-repeat;
+}
+.right{
+	width: 200px;
+	height: 600px;
+	background:rgba(0,0,0,0.6);
+	position: fixed;
+	top:50%;
+	margin-top: -300px;
+	left:983px;
+}
+.right .renji{
+	position: absolute;
+	top: 200px;
+	width: 180px;
+	height: 40px;
+	background: url(img/renji.png);
+	cursor: pointer;
+}
+.right .renren{
+	position: absolute;
+	top: 280px;
+	width: 180px;
+	height: 40px;
+	background: url(img/renren.png);
+	cursor: pointer;
+}
+.right .restart{
+	position: absolute;
+	top: 360px;
+	width: 180px;
+	height: 40px;
+	background: url(img/restart.png);
+	cursor: pointer;
+}
+.baiqiying{
+	@extend %center;
+	display: none;
+	width: 200px;
+	height: 150px;
+	background:rgba(0,0,0,0.6);
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 150px;
+	text-align: center;
+	border-radius: 5px;
+}
+.heiqiying{
+	@extend %center;
+	display: none;
+	width: 200px;
+	height: 150px;
+	background:rgba(0,0,0,0.6);
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 150px;
+	text-align: center;
+	border-radius: 5px;
+}

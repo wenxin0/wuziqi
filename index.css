@@ -1,0 +1,437 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.contain, .contain .qipan, .box, .baiqiying, .heiqiying {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.contain {
+  width: 100%;
+  height: 100%;
+  background: url(img/6.jpg) no-repeat center center;
+}
+
+.contain .qipan {
+  width: 600px;
+  height: 600px;
+  background: url(img/beijing.jpg);
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.contain .qipan .qizi {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin: 5px;
+  background: rgba(100, 29, 38, 0);
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.contain .qipan .qizi.bai {
+  background: #FFFFFF;
+  box-shadow: 0 5px 5px #666666;
+}
+
+.contain .qipan .qizi.hei {
+  background: #000000;
+  box-shadow: 0 5px 5px #666666;
+}
+
+.contain .qipan .hang {
+  display: block;
+  position: absolute;
+  height: 1px;
+  left: 20px;
+  width: 560px;
+  animation: bdong 1s ease forwards;
+  opacity: 0;
+  background: #000;
+}
+
+.contain .qipan .shu {
+  display: block;
+  position: absolute;
+  top: 20px;
+  width: 1px;
+  height: 560px;
+  animation: idong 1s ease forwards;
+  opacity: 0;
+  background: #000;
+}
+
+.qipan b:nth-of-type(1) {
+  top: 20px;
+}
+
+.qipan i:nth-of-type(1) {
+  left: 20px;
+}
+
+.qipan b:nth-of-type(2) {
+  top: 60px;
+}
+
+.qipan i:nth-of-type(2) {
+  left: 60px;
+}
+
+.qipan b:nth-of-type(3) {
+  top: 100px;
+}
+
+.qipan i:nth-of-type(3) {
+  left: 100px;
+}
+
+.qipan b:nth-of-type(4) {
+  top: 140px;
+}
+
+.qipan i:nth-of-type(4) {
+  left: 140px;
+}
+
+.qipan b:nth-of-type(5) {
+  top: 180px;
+}
+
+.qipan i:nth-of-type(5) {
+  left: 180px;
+}
+
+.qipan b:nth-of-type(6) {
+  top: 220px;
+}
+
+.qipan i:nth-of-type(6) {
+  left: 220px;
+}
+
+.qipan b:nth-of-type(7) {
+  top: 260px;
+}
+
+.qipan i:nth-of-type(7) {
+  left: 260px;
+}
+
+.qipan b:nth-of-type(8) {
+  top: 300px;
+}
+
+.qipan i:nth-of-type(8) {
+  left: 300px;
+}
+
+.qipan b:nth-of-type(9) {
+  top: 340px;
+}
+
+.qipan i:nth-of-type(9) {
+  left: 340px;
+}
+
+.qipan b:nth-of-type(10) {
+  top: 380px;
+}
+
+.qipan i:nth-of-type(10) {
+  left: 380px;
+}
+
+.qipan b:nth-of-type(11) {
+  top: 420px;
+}
+
+.qipan i:nth-of-type(11) {
+  left: 420px;
+}
+
+.qipan b:nth-of-type(12) {
+  top: 460px;
+}
+
+.qipan i:nth-of-type(12) {
+  left: 460px;
+}
+
+.qipan b:nth-of-type(13) {
+  top: 500px;
+}
+
+.qipan i:nth-of-type(13) {
+  left: 500px;
+}
+
+.qipan b:nth-of-type(14) {
+  top: 540px;
+}
+
+.qipan i:nth-of-type(14) {
+  left: 540px;
+}
+
+.qipan b:nth-of-type(15) {
+  top: 580px;
+}
+
+.qipan i:nth-of-type(15) {
+  left: 580px;
+}
+
+.contain .qipan span {
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #000000;
+  opacity: 0;
+  animation: diao 0.06s ease forwards;
+}
+
+.contain .qipan span:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+
+.contain .qipan span:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.contain .qipan span:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+
+.contain .qipan span:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+
+.contain .qipan span:nth-of-type(5) {
+  animation-delay: 1s;
+}
+
+.contain .qipan span:nth-of-type(1) {
+  top: 140px;
+  left: 140px;
+}
+
+.contain .qipan span:nth-of-type(2) {
+  top: 140px;
+  left: 460px;
+}
+
+.contain .qipan span:nth-of-type(3) {
+  top: 300px;
+  left: 300px;
+}
+
+.contain .qipan span:nth-of-type(4) {
+  top: 460px;
+  left: 140px;
+}
+
+.contain .qipan span:nth-of-type(5) {
+  top: 460px;
+  left: 460px;
+}
+
+.dian1 {
+  display: none;
+}
+
+@keyframes diao {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0px);
+    transform: translate3d(-45%, -45%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes bdong {
+  0% {
+    transform: translate3d(-1000px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes idong {
+  0% {
+    transform: translate3d(0, -1000px, 0);
+  }
+  100% {
+    transform: translateY(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background: #222222;
+  transform: translateX(0);
+  transition: transform 1s ease;
+}
+
+.box.ani {
+  transform: translateY(-1000px);
+}
+
+.box .kaishi {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -250px;
+  width: 500px;
+  height: 293px;
+  background: url(img/kaishi.png) no-repeat;
+  background-size: cover;
+  transform: translateY(0);
+  transition: transform 1s ease;
+}
+
+.box .youxi {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 500px;
+  left: 50%;
+  margin-left: -100px;
+  background: url(img/youxi.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 1s ease;
+}
+
+.left {
+  width: 200px;
+  height: 600px;
+  position: fixed;
+  top: 50%;
+  margin-top: -300px;
+  left: 183px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.left .left1 {
+  width: 180px;
+  height: 300px;
+  background: url(img/dujiaoshou.jpg) no-repeat;
+}
+
+.left .left1 .time1 {
+  width: 80px;
+  height: 20px;
+  position: absolute;
+  top: 249px;
+  left: 66px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #DAAE7D;
+  text-align: center;
+}
+
+.left .left2 .time2 {
+  width: 80px;
+  height: 20px;
+  position: absolute;
+  top: 549px;
+  left: 66px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #DAAE7D;
+  text-align: center;
+}
+
+.left .left2 {
+  width: 180px;
+  height: 300px;
+  background: url(img/aiqin.jpg) no-repeat;
+}
+
+.right {
+  width: 200px;
+  height: 600px;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 50%;
+  margin-top: -300px;
+  left: 983px;
+}
+
+.right .renji {
+  position: absolute;
+  top: 200px;
+  width: 180px;
+  height: 40px;
+  background: url(img/renji.png);
+  cursor: pointer;
+}
+
+.right .renren {
+  position: absolute;
+  top: 280px;
+  width: 180px;
+  height: 40px;
+  background: url(img/renren.png);
+  cursor: pointer;
+}
+
+.right .restart {
+  position: absolute;
+  top: 360px;
+  width: 180px;
+  height: 40px;
+  background: url(img/restart.png);
+  cursor: pointer;
+}
+
+.baiqiying {
+  display: none;
+  width: 200px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 150px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.heiqiying {
+  display: none;
+  width: 200px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 150px;
+  text-align: center;
+  border-radius: 5px;
+}
