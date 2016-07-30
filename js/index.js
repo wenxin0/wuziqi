@@ -1,6 +1,6 @@
 $(function() {
   $('audio').on('ended', function() {
-    audio.src = 'music.mp3';
+    audio.src = 'media/music.mp3';
     audio.play();
   })
   var time = 0;

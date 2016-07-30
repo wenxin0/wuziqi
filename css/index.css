@@ -11,7 +11,7 @@ body {
   padding: 0;
 }
 
-.contain, .contain .qipan, .box, .baiqiying, .heiqiying {
+.contain, .contain .qipan, .box, .bigbox, .baiqiying, .heiqiying {
   position: absolute;
   top: 0;
   left: 0;
@@ -23,13 +23,14 @@ body {
 .contain {
   width: 100%;
   height: 100%;
-  background: url(img/6.jpg) no-repeat center center;
+  background: #1F282D url(../img/6.jpg) no-repeat center center;
 }
 
 .contain .qipan {
+  z-index: 99999;
   width: 600px;
   height: 600px;
-  background: url(img/beijing.jpg);
+  background: url(../img/beijing.jpg);
   background-size: cover;
   opacity: 0.8;
 }
@@ -294,10 +295,11 @@ body {
   background: #222222;
   transform: translateX(0);
   transition: transform 1s ease;
+  z-index: 999999;
 }
 
 .box.ani {
-  transform: translateY(-1000px);
+  transform: translateY(-2000px);
 }
 
 .box .kaishi {
@@ -307,7 +309,7 @@ body {
   margin-left: -250px;
   width: 500px;
   height: 293px;
-  background: url(img/kaishi.png) no-repeat;
+  background: url(../img/kaishi.png) no-repeat;
   background-size: cover;
   transform: translateY(0);
   transition: transform 1s ease;
@@ -320,27 +322,32 @@ body {
   top: 500px;
   left: 50%;
   margin-left: -100px;
-  background: url(img/youxi.png) no-repeat;
+  background: url(../img/youxi.png) no-repeat;
   background-size: cover;
   cursor: pointer;
   transform: translateY(0);
   transition: transform 1s ease;
 }
 
-.left {
-  width: 200px;
+.bigbox {
+  width: 1200px;
   height: 600px;
-  position: fixed;
-  top: 50%;
-  margin-top: -300px;
-  left: 183px;
   background: rgba(0, 0, 0, 0.6);
+}
+
+.left {
+  width: 40%;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .left .left1 {
   width: 180px;
   height: 300px;
-  background: url(img/dujiaoshou.jpg) no-repeat;
+  background: url(../img/dujiaoshou.jpg) no-repeat;
 }
 
 .left .left1 .time1 {
@@ -370,43 +377,46 @@ body {
 .left .left2 {
   width: 180px;
   height: 300px;
-  background: url(img/aiqin.jpg) no-repeat;
+  background: url(../img/aiqin.jpg) no-repeat;
 }
 
 .right {
-  width: 200px;
+  width: 40%;
   height: 600px;
-  background: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 50%;
-  margin-top: -300px;
-  left: 983px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 5%;
 }
 
 .right .renji {
   position: absolute;
   top: 200px;
+  right: 0;
   width: 180px;
   height: 40px;
-  background: url(img/renji.png);
+  background: url(../img/renji.png);
   cursor: pointer;
 }
 
 .right .renren {
   position: absolute;
   top: 280px;
+  right: 0;
   width: 180px;
   height: 40px;
-  background: url(img/renren.png);
+  background: url(../img/renren.png);
   cursor: pointer;
 }
 
 .right .restart {
   position: absolute;
   top: 360px;
+  right: 0;
   width: 180px;
   height: 40px;
-  background: url(img/restart.png);
+  background: url(../img/restart.png);
   cursor: pointer;
 }
 
@@ -421,6 +431,7 @@ body {
   line-height: 150px;
   text-align: center;
   border-radius: 5px;
+  z-index: 999999;
 }
 
 .heiqiying {
@@ -434,4 +445,5 @@ body {
   line-height: 150px;
   text-align: center;
   border-radius: 5px;
+  z-index: 999999;
 }

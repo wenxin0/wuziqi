@@ -16,18 +16,25 @@ body{
 	bottom:0;
 	margin: auto;
 }
+@mixin shangxia{
+	position: absolute;
+	top:0;
+	bottom:0;
+	margin:auto;
+}
 .contain{
 	@extend %center;
 	width: 100%;
 	height: 100%;
-	background: url(img/6.jpg)no-repeat center center;
+	background: #1F282D url(../img/6.jpg)no-repeat center center;
 }
 $width:600px;
 .contain .qipan{
+	z-index: 99999;
 	@extend %center;
 	width: $width;
 	height: $width;
-	background: url(img/beijing.jpg);
+	background: url(../img/beijing.jpg);
 	background-size: cover;
 	opacity: 0.8;
 	.qizi{		
@@ -152,9 +159,10 @@ $width:600px;
 	background:#222222;
 	transform:translateX(0);
 	transition:transform 1s ease;
+	z-index: 999999;
 }
 .box.ani{
-	transform:translateY(-1000px);
+	transform:translateY(-2000px);
 }
 .box .kaishi{
 	position: absolute;
@@ -163,7 +171,7 @@ $width:600px;
 	margin-left: -250px;
 	width:500px;
 	height: 293px;
-	background:url(img/kaishi.png)no-repeat;
+	background:url(../img/kaishi.png)no-repeat;
 	background-size: cover;
 	transform:translateY(0);
 	transition:transform 1s ease;
@@ -175,25 +183,27 @@ $width:600px;
 	top: 500px;
 	left: 50%;
 	margin-left: -100px;
-	background:url(img/youxi.png)no-repeat;
+	background:url(../img/youxi.png)no-repeat;
 	background-size: cover;
 	cursor: pointer;
 	transform:translateY(0);
 	transition:transform 1s ease;
 }
-.left{
-	width: 200px;
-	height: 600px;
-	position: fixed;
-	top:50%;
-	margin-top: -300px;
-	left:183px;
+.bigbox{
+	width: $width*2;
+	height:$width;
+	@extend %center;
 	background:rgba(0,0,0,0.6);
+}
+.left{
+	width: 40%;
+	height: $width;
+	@include shangxia;
 }
 .left .left1{
 	width: 180px;
 	height: 300px;
-	background: url(img/dujiaoshou.jpg)no-repeat;
+	background: url(../img/dujiaoshou.jpg)no-repeat;
 }
 .left .left1 .time1{
 	width: 80px;
@@ -220,39 +230,39 @@ $width:600px;
 .left .left2{
 	width: 180px;
 	height: 300px;
-	background: url(img/aiqin.jpg)no-repeat;
+	background: url(../img/aiqin.jpg)no-repeat;
 }
 .right{
-	width: 200px;
-	height: 600px;
-	background:rgba(0,0,0,0.6);
-	position: fixed;
-	top:50%;
-	margin-top: -300px;
-	left:983px;
+	width: 40%;
+	height: $width;
+	@include shangxia;
+	right:5%;
 }
 .right .renji{
 	position: absolute;
 	top: 200px;
+	right:0;
 	width: 180px;
 	height: 40px;
-	background: url(img/renji.png);
+	background: url(../img/renji.png);
 	cursor: pointer;
 }
 .right .renren{
 	position: absolute;
 	top: 280px;
+	right:0;
 	width: 180px;
 	height: 40px;
-	background: url(img/renren.png);
+	background: url(../img/renren.png);
 	cursor: pointer;
 }
 .right .restart{
 	position: absolute;
 	top: 360px;
+	right:0;
 	width: 180px;
 	height: 40px;
-	background: url(img/restart.png);
+	background: url(../img/restart.png);
 	cursor: pointer;
 }
 .baiqiying{
@@ -267,6 +277,7 @@ $width:600px;
 	line-height: 150px;
 	text-align: center;
 	border-radius: 5px;
+	z-index: 999999;
 }
 .heiqiying{
 	@extend %center;
@@ -280,4 +291,5 @@ $width:600px;
 	line-height: 150px;
 	text-align: center;
 	border-radius: 5px;
+	z-index: 999999;
 }
